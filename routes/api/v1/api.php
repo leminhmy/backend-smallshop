@@ -28,17 +28,22 @@ Route::group(['namespace' => 'Api\V1'], function (){
         Route::get('leather', 'ShoesProductController@get_leather_shoes_proucts');
         Route::get('shoes', 'ShoesProductController@get_shoes_product');
         Route::get('shoes-types', 'ShoesProductController@get_shoes_type');
+        
+    });
+     Route::group(['prefix' => 'adproducts', 'middleware' => 'auth:api'], function (){
         Route::post('update/{id}', 'ShoesProductController@update');
         Route::put('update/{id}/status/{status}', 'ShoesProductController@updateStatus');
         Route::delete('delete/{id}', 'ShoesProductController@delete');
         Route::post('uploadfile', 'ShoesProductController@uploadFile');
         Route::post('add', 'ShoesProductController@addToProduct');
         Route::delete('delete/{id}/img/{nameimg}', 'ShoesProductController@deleteImg');
+       
     });
 
     Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function (){
         Route::post('register', 'CustomerAuthController@register');
         Route::post('login', 'CustomerAuthController@login');
+       
     });
 
       Route::group(['prefix' => 'map'], function (){
@@ -51,6 +56,10 @@ Route::group(['namespace' => 'Api\V1'], function (){
      Route::group(['prefix' => 'messaging', 'namespace' => 'Auth','middleware' => 'auth:api'], function (){
         Route::post('send', 'MessagingController@sendMessages');
         Route::get('get', 'MessagingController@getMessages');
+        Route::post('set', 'MessagingController@setIsSeeMessaging');
+        Route::get('getmiss', 'MessagingController@getTotalMessNotSee');
+        Route::get('get-notification', 'MessagingController@getNotification');
+        Route::post('save-notification', 'MessagingController@saveNotification');
     });
 
     Route::group(['prefix' => 'customer', 'middleware' => 'auth:api'], function(){
@@ -58,6 +67,7 @@ Route::group(['namespace' => 'Api\V1'], function (){
          Route::get('info', 'CustomerController@info');
          Route::get('listusers', 'CustomerController@getAllUsers');
          Route::get('listadmin', 'CustomerController@getAllAdmin');
+        Route::post('profile/update', 'CustomerController@updateUser');
      });
 
     Route::group(['prefix' => 'order', 'middleware' => 'auth:api'], function (){

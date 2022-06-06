@@ -28,4 +28,33 @@ class CustomerController extends Controller
 
         return response()->json($list, 200);
     }
+    
+    public function updateUser(Request $request){
+
+        // upload only img
+        $image = $request->file('image');
+        $imagenew = '';
+        if($request->hasFile('image')){
+             $imagenew = rand().'.'.$image->getClientOriginalName();
+            $image->move(public_path('/uploads/users'),$imagenew);
+        
+        }else{
+            return response()->json('image null');
+        }
+
+        $user = [
+            'name' => $request['name'],
+            'phone' => $request['phone'],
+            'image' => $imagenew,
+            'created_at' => now(), 
+            'updated_at' => now()
+        ];
+
+        $userID = $request->user()->id;
+        DB::table('users')->where('id', $userID)->update($user);
+
+        $userJson = User::where('id', $userID)->get();
+
+        return response()->json($userJson, 200);
+    }
 }

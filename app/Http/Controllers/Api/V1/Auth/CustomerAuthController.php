@@ -86,5 +86,6 @@ class CustomerAuthController extends Controller
         return response()->json(['token' => $token,'token_messages'=>$user->token_messages ,'name'=>$user->name,'email'=>$user->email,'is_phone_verified' => 0, 'phone_verify_end_url'=>"api/v1/auth/verify-phone" ], 200);
     }
 
+
    
 }

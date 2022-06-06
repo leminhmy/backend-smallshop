@@ -1,0 +1,40 @@
+[03-Jun-2022 14:12:17 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:12:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:12:22 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:12:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:06 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:07 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:07 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:08 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:09 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:10 UTC] PHP Warning:  require(/home/pplpnzyq/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/pplpnzyq/public_html/index.php on line 34
+[03-Jun-2022 14:13:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/pplpnzyq/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/pplpnzyq/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/pplpnzyq/public_html/index.php on line 34

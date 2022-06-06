@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Shoes;
 use App\Models\ShoesType;
 use App\Models\Orders;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ShoesProductController extends Controller
 {
@@ -186,15 +188,41 @@ class ShoesProductController extends Controller
     }
  
 
-    public function addToProduct(Request $request){
-        //file convert image
+   public function addToProduct(Request $request){
+
+        //check is Admina
+        
+        $status = $request->user()->status;
+        if($status == 2){
+           //file convert image
         $images = $request->file('image');
         $imageName = '';
+        $size_image = '';
+        $value_check = 0;
+         if($request->hasFile('image')){
+            foreach($images as $image){
+            $size_image = $image->getSize();
+            if($size_image > 2000000)
+            {
+                $value_check++;
+            }
+            
+            }
+         }
         if($request->hasFile('image')){
             foreach($images as $image){
-            $new_name = rand().'.'.$image->getClientOriginalName();
-            $image->move(public_path('/uploads/shoes'),$new_name);
-            $imageName = $imageName.$new_name.",";
+            if($value_check < 1){
+                
+                $new_name = rand().'.'.$image->getClientOriginalName();
+                $image_resize = Image::make($image->getRealPath());
+                $image_resize->save(public_path('/uploads/shoes/'.$new_name),60);
+                $imageName = $imageName.$new_name.",";
+            }
+            else{
+                return response()->json('Size image bigger 2m error');
+            }
+            
+        
         }
 
 
@@ -229,13 +257,20 @@ class ShoesProductController extends Controller
         if($shoes->save()){
             return response()->json([
                 'code' => 0,
-                'msg' => 'Success'
+                'msg' => 'Success',
+                'size_image' => $size_image,
             ]);
         }
         return response()->json([
                 'code' => -1,
                 'msg' => 'fail'
         ]);
+        }else{
+
+            return response()->json('isUser can not add product');
+        }
+
+        
     }
 
 }
